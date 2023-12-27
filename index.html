@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        body {
+            background-color: lightyellow;
+        }
+    </style>
     <title>Lan & Egg</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -29,6 +34,16 @@
             font-size: 20px;
             font-style: normal;
         }
+        .media h5 {
+            margin-top: 0px;
+            font-size: 50px;
+            font-style: normal;
+        }
+        .media p {
+            font-size: 14px;
+            font-family: 'Courier New';
+            font-weight: bold;
+        }
         @media only screen and (max-width: 600px) {
             /* Styles for mobile devices */
             body {
@@ -41,6 +56,18 @@
         }
     </style>
     <style>
+        h5 {
+        /* Add your styles here */
+        font-size: 20px; /* Set the desired font size */
+            font-family: 'Courier New';
+            font-weight: bold;
+            /* border-top: 1px solid black; */
+            /* padding-top: 10px; */
+            border-bottom: 1px solid black;
+            /* padding-bottom: 10px; */
+    }
+    </style>
+    <style>
         /* Existing styles */
     
         #media-container {
@@ -51,12 +78,12 @@
     
         .media img, .media video {
             width: 100%;
-            max-width: 500px; /* Set a fixed max-width */
+            max-width: 400px; /* Set a fixed max-width */
             height: auto;
         }
     
         /* Responsive design */
-        @media (max-width: 600px) {
+        @media (max-width: 500px) {
             .media img, .media video {
                 max-width: 100%;
             }
@@ -106,28 +133,51 @@
     <div id="time-clock">
     </div>
     <h2>Our TimeLine</h2>
+    <div id="media-container-2">
+        <div class="media">
+            <img src="lan/28.jpg" alt="Media 28" style="width: 200px;">
+        </div>
+    </div>
+    <h5>To my true and only love, Lan. --Egg</h5>
     <div id="media-container">
         <!-- Media will be loaded here -->
         
         <div class="media">
             <h3>First Met</h3>
-            <h4>Location - Harbin</h4>
+            <h4>Location - Ice World, Harbin</h4>
             <p>2019-12-28</p>
-            <p><strong>Lan & Egg Crushed on each other.</strong></p>
+            <p>Lan & Egg Crushed on each other.</p>
             <img src="lan/32.jpg" alt="Media 1">
         </div>
         <div class="media">
-            <h3>Title 2</h3>
-            <h4>Subtitle 2</h4>
-            <p>Timestamp 2</p>
-            <p>Description 2</p>
+            <h3>Pandemic - 626, 下一站廣州</h3>
+            <h4>Location - 626, Guangzhou</h4>
+            <p>2020-7</p>
+            <p>廣州流浪小鴛鴦，短髮嵐兒</p>
+            <img src="lan/2.jpeg" alt="Media 1">
+        </div>
+
+        <div class="media">
+            <h3>Pandemic - 1711</h3>
+            <h4>Location - 1711, Guangzhou</h4>
+            <p>2021-07-24 23:50</p>
+            <p>每周出游归来，绿色岚儿</p>
             <video src="lan/4.mp4" controls autoplay muted loop></video>
         </div>
+
         <div class="media">
-            <h3>Title 3</h3>
-            <h4>Subtitle 3</h4>
-            <p>Timestamp 3</p>
-            <p>Description 3</p>
+            <h3>Pandemic - 1711, 霍亂出游</h3>
+            <h4>Location - 小欖</h4>
+            <p>2021-09-20 19:00</p>
+            <p>生日前和岚儿去小榄旅游见舅舅</p>
+            <img src="lan/33.jpg" alt="Media 33">
+        </div>
+
+        <div class="media">
+            <h3>Pandemic - 1711, 珠江日游</h3>
+            <h4>Location - 珠江， 廣州</h4>
+            <p>2022</p>
+            <p>第一次白天游珠江</p>
             <img src="lan/3.jpeg" alt="Media 3">
         </div>
     </div>
