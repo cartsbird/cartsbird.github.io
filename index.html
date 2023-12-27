@@ -139,7 +139,7 @@
         .media img, .media video {
             width: 100%;
             max-width: 400px; /* Set a fixed max-width */
-            height: auto;
+            max-height: 600px;
         }
     
         /* Responsive design */
@@ -147,6 +147,22 @@
             .media img, .media video {
                 max-width: 100%;
             }
+        }
+        #scrollable-container {
+            display: flex; /* This makes the children layout in a row */
+            flex-wrap: nowrap; /* This prevents the children from wrapping to a new line */
+            overflow-x: auto; /* This enables horizontal scrolling */
+            overflow-y: hidden; /* This disables vertical scrolling */
+            width: 500px;
+            height: 600px;
+        }
+        .scrollable-container {
+            display: flex; /* This makes the children layout in a row */
+            flex-wrap: nowrap; /* This prevents the children from wrapping to a new line */
+            overflow-x: auto; /* This enables horizontal scrolling */
+            overflow-y: hidden; /* This disables vertical scrolling */
+            width: 500px;
+            height: 600px;
         }
     
         /* Existing styles */
@@ -210,7 +226,7 @@
             <img src="lan/32.jpg" alt="Media 1">
         </div>
         <div class="media">
-            <h3>Pandemic - 626, 下一站廣州</h3>
+            <h3>Pandemic 1 - 626, 下一站廣州</h3>
             <h4>Location - 626, Guangzhou</h4>
             <p>2020-7</p>
             <p>廣州流浪小鴛鴦，短髮嵐兒</p>
@@ -218,7 +234,7 @@
         </div>
 
         <div class="media">
-            <h3>Pandemic - 1711</h3>
+            <h3>Pandemic 2 - 1711</h3>
             <h4>Location - 1711, Guangzhou</h4>
             <p>2021-07-24 23:50</p>
             <p>每周出游归来，绿色岚儿</p>
@@ -226,7 +242,7 @@
         </div>
 
         <div class="media">
-            <h3>Pandemic - 1711, 霍亂出游</h3>
+            <h3>Pandemic 2 - 1711, 見家長</h3>
             <h4>Location - 小欖</h4>
             <p>2021-09-20 19:00</p>
             <p>生日前和岚儿去小榄旅游见舅舅</p>
@@ -234,12 +250,87 @@
         </div>
 
         <div class="media">
-            <h3>Pandemic - 1711, 珠江日游</h3>
-            <h4>Location - 珠江， 廣州</h4>
-            <p>2022</p>
+            <h3>Pandemic 2 - 1711, 珠江日游</h3>
+            <h4>Location - 珠江, 廣州</h4>
+            <p>2021</p>
             <p>第一次白天游珠江</p>
             <img src="lan/3.jpeg" alt="Media 3">
         </div>
+
+        <div class="media">
+            <h3>Pandemic - 626, 長洲</h3>
+            <h4>Location - 長洲, 廣州</h4>
+            <p>2021</p>
+            <p>第一次坐船,上島。</p>
+            <img src="lan/1.jpeg" alt="Media 1">
+        </div>
+
+        <div class="media">
+            <h3>Pandemic 2 - 603, 尋聖誕</h3>
+            <h4>Location - 天河, 廣州</h4>
+            <p>2021-12-24</p>
+            <p>出去找節日氣氛，好不容易找到給嵐兒借樹拍照</p>
+            <img src="lan/11.jpg" alt="Media 11">
+        </div>
+        
+        <div class="media">
+            <h3>Pandemic 3 - 603, 元旦, 天台烧烤</h3>
+            <h4>Location - 603, 羅馬, 廣州</h4>
+            <p>2022-01-01</p>
+            <p>和嵐嵐一起燒烤！</p>
+            <img src="lan/34.jpg" alt="Media 34">
+        </div>
+        
+        <div class="media">
+            <h3>POST Pandemic - 603, 逃出生天</h3>
+            <h4>Location - 603, 廣州之窗, 廣州</h4>
+            <p>2022-12-01</p>
+            <p>Lan & Egg 空無一人的新世界探險</p>
+            <img src="lan/35.jpg" alt="Media 35">
+        </div>
+        
+        <div class="media">
+            <h3>POST Pandemic - 603, 小香蕉</h3>
+            <h4>Location - 603, 果園, 廣州</h4>
+            <p>2022-04</p>
+            <p>Lan的小香蕉調查</p>
+            <img src="lan/12.jpg" alt="Media 12">
+        </div>
+
+        <div class="media">
+            <h3>POST Pandemic - 603, 小香蕉</h3>
+            <h4>Location - 603, 果園, 廣州</h4>
+            <p>2022-04</p>
+            <p>Lan的小香蕉調查</p>
+            <img src="lan/12.jpg" alt="Media 12">
+        </div>
+        
+        <div class="media">
+            <h3>Pandemic 3- 603, 小香蕉</h3>
+            <h4>Location - 603, 后滘西大街, 廣州</h4>
+            <p>2022</p>
+            <p>Lan & Egg一起打水漂, Lan 打草丛:)</p>
+            <img src="lan/14.jpg" alt="Media 14">
+        </div>
+        
+        <div class="media">
+            <h3>603, 杂记</h3>
+            <h4>Location - 603, 排档/筒骨粉/台球/尊宝披萨/小蛋糕, 廣州</h4>
+            <p>2021--2022</p>
+            <p>Lan & Egg 的据点们。露天台球喜得covid.</p>
+            <div class="scrollable-container">
+                <img src="lan/36.jpg" alt="Media 36">
+                <p>_</p>
+                <img src="lan/19.jpg" alt="Media 19">
+                <p>_</p>
+                <img src="lan/15.jpg" alt="Media 15">
+                <p>_</p>
+                <img src="lan/17.jpg" alt="Media 17">
+                <p>_</p>
+                <img src="lan/20.jpg" alt="Media 20">
+            </div>
+        </div>
+
     </div>
     <canvas id="fireworksCanvas"></canvas>
 </body>
