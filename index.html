@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lan & Egg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script src="js/materialize.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: "Times New Roman", Arial, sans-serif;
+        }
+        .media {
+            border-top: 1px solid black;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        .media h1 {
+            margin-top: 0px;
+        }
+        .media h3 {
+            border-bottom: 1px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .media h4 {
+            margin-top: 0px;
+            font-size: 20px;
+            font-style: normal;
+        }
+        @media only screen and (max-width: 600px) {
+            /* Styles for mobile devices */
+            body {
+                font-size: 14px;
+            }
+            .media {
+                padding: 5px;
+                margin: 5px;
+            }
+        }
+    </style>
+    <style>
+        /* Existing styles */
+    
+        #media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .media img, .media video {
+            width: 100%;
+            max-width: 500px; /* Set a fixed max-width */
+            height: auto;
+        }
+    
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .media img, .media video {
+                max-width: 100%;
+            }
+        }
+    
+        /* Existing styles */
+    </style>
+    <style>
+        /* Existing styles */
+
+        #time-clock {
+            font-size: 20px; /* Set the desired font size */
+            font-family: 'Courier New';
+            font-weight: bold;
+            border-top: 1px solid black;
+            /* padding-top: 10px; */
+            border-bottom: 1px solid black;
+            /* padding-bottom: 10px; */
+        }
+
+        /* Existing styles */
+    </style>
+<script>
+    function updateTimeClock() {
+        // Calculate the time difference between the specific date and the current time
+        var startDate = new Date('2019-12-28T00:00:00+08:00');
+        var currentDate = new Date();
+        var timeDifference = currentDate - startDate;
+
+        // Convert the time difference to years, days, hours, minutes, and seconds
+        var years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365.25));
+        var days = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        // Update the time clock
+        var timeClock = document.getElementById('time-clock');
+        timeClock.innerHTML = '<p>Years: ' + years + '  Days: ' + days +' Hours: '+hours + ' Minutes: ' + minutes+ ' Seconds: ' + seconds + '</p>';
+    }
+
+    // Update the time clock every second
+    setInterval(updateTimeClock, 1000);
+</script>
+<body>
+    <h1>LAN & EGG ANNIVERSARY</h1>
+    <div id="time-clock">
+    </div>
+    <h2>Our TimeLine</h2>
+    <div id="media-container">
+        <!-- Media will be loaded here -->
+        
+        <div class="media">
+            <h3>First Met</h3>
+            <h4>Location - Harbin</h4>
+            <p>2019-12-28</p>
+            <p><strong>Lan & Egg Crushed on each other.</strong></p>
+            <img src="lan/32.jpg" alt="Media 1">
+        </div>
+        <div class="media">
+            <h3>Title 2</h3>
+            <h4>Subtitle 2</h4>
+            <p>Timestamp 2</p>
+            <p>Description 2</p>
+            <video src="lan/4.mp4" controls autoplay muted loop></video>
+        </div>
+        <div class="media">
+            <h3>Title 3</h3>
+            <h4>Subtitle 3</h4>
+            <p>Timestamp 3</p>
+            <p>Description 3</p>
+            <img src="lan/3.jpeg" alt="Media 3">
+        </div>
+    </div>
+</body>
+</html>
